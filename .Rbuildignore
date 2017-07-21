@@ -3,3 +3,5 @@
 ^.*\.png$
 README.md
 ^compiled_vignette/*
+^index.Rmd$
+^index.html$
