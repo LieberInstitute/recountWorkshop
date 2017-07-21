@@ -892,7 +892,6 @@ We can finally use `plotRegionCoverage()` to visualize the top 10 regions colori
 
 ```{r "region_plots", eval = .Platform$OS.type != "windows", out.width="100%", fig.align="center"}
 library("derfinderPlot")
-pdf('prueba.pdf')
 plotRegionCoverage(regions = regions_resized, regionCoverage = regionCov, 
    groupInfo = colData(rse_er)$case,
    nearestAnnotation = nearest_ann, 
@@ -900,7 +899,6 @@ plotRegionCoverage(regions = regions_resized, regionCoverage = regionCov,
    txdb = gencode_v25_hg38_txdb,
    scalefac = 1, ylab = "Coverage (RP40M, 100bp)",
    ask = FALSE, verbose = FALSE)
-   dev.off()
 ```
 
 In the previous plots we can see that some DERs are longer than known exons, others match known exons, and some are un-annotated expressed regions.

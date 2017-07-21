@@ -37,15 +37,17 @@ library('devtools')
 install_github('LieberInstitute/recountWorkshop')
 ```
 
-## Main workshop file
+## Main workshop files
 
-* [recount workshop](compiled_vignette/recount-workshop.html) main file, [R](compiled_vignette/recount-workshop.R) code, raw [Rmd](compiled_vignette/recount-workshop.Rmd) file
+* [recount workshop](compiled_vignette/recount-workshop.html) main file, 
+* [R](compiled_vignette/recount-workshop.R) code,
+* raw [Rmd](compiled_vignette/recount-workshop.Rmd) file.
 
 ### Report files created in the workshop
 
-* [SRP056604_main-results](compiled_vignette/SRP056604_main-results.html) report, [bibliography](compiled_vignette/SRP056604_main-results.bib)
-* [SRP056604_sex-predictions](compiled_vignette/SRP056604_sex-predictions.html) report, [bibliography](compiled_vignette/SRP056604_sex-predictions.bib)
-* [SRP056604_DERs](compiled_vignette/SRP056604_DERs.html) report, [bibliography](compiled_vignette/SRP056604_DERs.bib)
+* [SRP056604_main-results](compiled_vignette/SRP056604_main-results.html) report, [bibliography](compiled_vignette/SRP056604_main-results.bib).
+* [SRP056604_sex-predictions](compiled_vignette/SRP056604_sex-predictions.html) report, [bibliography](compiled_vignette/SRP056604_sex-predictions.bib).
+* [SRP056604_DERs](compiled_vignette/SRP056604_DERs.html) report, [bibliography](compiled_vignette/SRP056604_DERs.bib).
 
 ## Feedback and bug reports
 

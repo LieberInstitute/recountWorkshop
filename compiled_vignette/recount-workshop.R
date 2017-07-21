@@ -596,7 +596,6 @@ regions_ann <- annotateRegions(regions_resized,
 
 ## ----"region_plots", eval = .Platform$OS.type != "windows", out.width="100%", fig.align="center"----
 library("derfinderPlot")
-pdf('prueba.pdf')
 plotRegionCoverage(regions = regions_resized, regionCoverage = regionCov, 
    groupInfo = colData(rse_er)$case,
    nearestAnnotation = nearest_ann, 
@@ -604,7 +603,6 @@ plotRegionCoverage(regions = regions_resized, regionCoverage = regionCov,
    txdb = gencode_v25_hg38_txdb,
    scalefac = 1, ylab = "Coverage (RP40M, 100bp)",
    ask = FALSE, verbose = FALSE)
-   dev.off()
 
 ## ----sessionInfo----------------------------------------------------------------------------------
 ## Pandoc information
