@@ -1,0 +1,4 @@
+^vignettes/figure$
+^.git$
+^.*\.png$
+README.md

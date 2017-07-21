@@ -1,0 +1,52 @@
+Package: recountWorkshop
+Title: recount workshop: Learn to leverage 70,000 human RNA-seq samples for your
+    projects
+Version: 0.99.0
+Authors@R: c(person("Leonardo", "Collado-Torres", role = c("aut", "cre"),
+    email = "lcollado@jhu.edu"), person("Abhinav", "Nellore", role = "ctb",
+    email = "anellore@gmail.com"), person(c("Andrew", "E."), "Jaffe",
+    role = "ctb", email = "andrew.jaffe@libd.org"))
+Description: The recount2 project re-processed RNA sequencing (RNA-seq) data on
+    over 70,000 human RNA-seq samples spanning a variety of tissues, cell types
+    and disease conditions. Researchers can easily access these data via the
+    recount Bioconductor package, and can quickly import gene, exon, exon-exon
+    junction and base-pair coverage data for uniformly processed data from the
+    SRA, GTEx and TCGA projects in R for analysis. This workshop will cover
+    different use cases of the recount package, including downloading and
+    normalizing data, processing and cleaning relevant phenotype data,
+    performing differential expression (DE) analyses, and creating reports for
+    exploring the results using other Bioconductor packages. The workshop will
+    also cover how to use the base-pair coverage data for annotation-agnostic DE
+    analyses and for visualizing coverage data for features of interest. After
+    taking this workshop, attendees will be ready to enhance their analyses by
+    leveraging RNA-seq data from 70,000 human samples.
+Depends: R (>= 3.4.0)
+License: Artistic-2.0
+Encoding: UTF-8
+LazyData: true
+biocViews: Workshop, Coverage, DifferentialExpression, GeneExpression,
+    RNASeq, Sequencing, DataImport
+VignetteBuilder: knitr
+Imports:
+    recount,
+    GenomicRanges,
+    ideal,
+    DESeq2,
+    regionReport (>= 1.11.2),
+    clusterProfiler (>= 3.5.4),
+    org.Hs.eg.db (>= 3.4.1),
+    gplots,
+    derfinder,
+    rtracklayer,
+    GenomicFeatures,
+    bumphunter (>= 1.17.2),
+    derfinderPlot
+Suggests:
+    BiocStyle,
+    knitr,
+    devtools,
+    rmarkdown,
+    knitcitations
+NeedsCompilation: no
+URL: https://github.com/LieberInstitute/recountWorkshop
+BugReports: https://github.com/LieberInstitute/recountWorkshop/issues
