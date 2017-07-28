@@ -707,28 +707,17 @@ regions <- regions[width(regions) >= 60]
 length(regions)
 ```
 
-Now that we have a set of regions to work with, we proceed to build a _RangedSummarizedExperiment_ object with the coverage counts, add the expanded metadata we built for the gene level, and scale the counts.
+Now that we have a set of regions to work with, we proceed to build a _RangedSummarizedExperiment_ object with the coverage counts, add the expanded metadata we built for the gene level, and scale the counts. Note that `coverage_matrix()` by defaults scales the counts. We will round them to integers in order to use `DESeq2`.
 
 ```{r "build_rse_ER", eval = .Platform$OS.type != "windows"}
 ## Compute coverage matrix for study SRP056604, only for chromosome 12
 ## Takes about 45 seconds with local data
 ## and about 70 seconds with data from the web
 system.time(rse_er <- coverage_matrix("SRP056604", "chr12", regions,
-    chunksize = length(regions), outdir = local_path))
+    chunksize = length(regions), outdir = local_path, round = TRUE))
 
 ## Use the expanded metadata we built for the gene model
 colData(rse_er) <- colData(rse_gene_scaled)
-
-## Normally, we would scale the counts but that leads
-## to very small numbers in this example.
-colSums(assays(scale_counts(rse_er))$counts)
-summary(rowMeans(assays(scale_counts(rse_er))$counts))
-
-## So instead of scaling, we will transform to integers
-## keeping numbers around the 1 million counts
-colSums(assays(rse_er)$counts)
-assays(rse_er)$counts <- round(assays(rse_er)$counts, 0)
-colSums(assays(rse_er)$counts)
 ```
 
 Now that we have an integer count matrix for the expressed regions, we can proceed with the differential expression analysis just like we did at the gene and exon feature levels.

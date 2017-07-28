@@ -457,21 +457,10 @@ length(regions)
 ## Takes about 45 seconds with local data
 ## and about 70 seconds with data from the web
 system.time(rse_er <- coverage_matrix("SRP056604", "chr12", regions,
-    chunksize = length(regions), outdir = local_path))
+    chunksize = length(regions), outdir = local_path, round = TRUE))
 
 ## Use the expanded metadata we built for the gene model
 colData(rse_er) <- colData(rse_gene_scaled)
-
-## Normally, we would scale the counts but that leads
-## to very small numbers in this example.
-colSums(assays(scale_counts(rse_er))$counts)
-summary(rowMeans(assays(scale_counts(rse_er))$counts))
-
-## So instead of scaling, we will transform to integers
-## keeping numbers around the 1 million counts
-colSums(assays(rse_er)$counts)
-assays(rse_er)$counts <- round(assays(rse_er)$counts, 0)
-colSums(assays(rse_er)$counts)
 
 ## ----"er_de_analysis", eval = .Platform$OS.type != "windows", out.width="100%", fig.align="center"----
 ## Define DESeq2 object
