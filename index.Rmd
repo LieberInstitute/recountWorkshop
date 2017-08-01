@@ -39,6 +39,7 @@ install_github('LieberInstitute/recountWorkshop')
 
 ## Main workshop files
 
+* [introductory presentation](compiled_vignette/BioC2017.pdf),
 * [recount workshop](compiled_vignette/recount-workshop.html) main file, 
 * [R](compiled_vignette/recount-workshop.R) code,
 * raw [Rmd](compiled_vignette/recount-workshop.Rmd) file.
