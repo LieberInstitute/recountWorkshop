@@ -6,8 +6,9 @@ knitr::include_graphics("Figure2.png")
 
 ## ----"install", eval = FALSE-----------------------------------------------
 #  ## Install packages from Bioconductor
-#  source("https://bioconductor.org/biocLite.R")
-#  biocLite(c("recount", "GenomicRanges", "DESeq2", "ideal", "regionReport",
+#  install.packages("BiocManager")
+#  BiocManager::install(c(
+#      "recount", "GenomicRanges", "DESeq2", "ideal", "regionReport",
 #      "clusterProfiler", "org.Hs.eg.db", "gplots", "derfinder",
 #      "rtracklayer", "GenomicFeatures", "bumphunter", "derfinderPlot",
 #      "devtools"))
