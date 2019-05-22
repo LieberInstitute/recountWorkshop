@@ -3,7 +3,7 @@ Title: recount workshop: Learn to leverage 70,000 human RNA-seq samples for your
     projects
 Version: 0.99.4
 Authors@R: c(person("Leonardo", "Collado-Torres", role = c("aut", "cre"),
-    email = "lcollado@jhu.edu"), person("Abhinav", "Nellore", role = "ctb",
+    email = "lcolladotor@gmail.com"), person("Abhinav", "Nellore", role = "ctb",
     email = "anellore@gmail.com"), person(c("Andrew", "E."), "Jaffe",
     role = "ctb", email = "andrew.jaffe@libd.org"))
 Description: The recount2 project re-processed RNA sequencing (RNA-seq) data on
