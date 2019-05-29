@@ -334,7 +334,7 @@ Since we have the `characteristics` information for study SRP056604, lets extrac
 ## Get the case status: either LOAD or control
 colData(rse_gene)$case <- factor(
     sapply(colData(rse_gene)$characteristics, function(x)
-        ifelse(any(grepl("LOAD", x)), "control", "LOAD"))
+        ifelse(any(grepl("LOAD", x)), "LOAD", "control"))
 )
 
 ## Get the sex
